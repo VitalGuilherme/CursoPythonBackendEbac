@@ -1,0 +1,31 @@
+class Animal():
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def emitir_som(self):
+        print("O animal emitiu um som genérico. ")
+        
+    
+class cachorro(Animal):
+    def __init__(self, nome, idade):
+        super().__init__(nome, idade)
+    
+    def emitir_som(self):
+        print("O cachorro latiu!")
+
+class gato(Animal):
+    def __init__(self, nome, idade):
+        super().__init__(nome, idade)
+    
+    def emitir_som(self):
+        print("O gato miou!")
+
+meu_cachorro = cachorro("Marley", 5)
+meu_gato = gato("Caputina", 3)
+
+print(f"O nome do meu cachorro é {meu_cachorro.nome} , ele tem {meu_cachorro.idade} de idade.")
+meu_cachorro.emitir_som()
+
+print(f"O nome do meu gato é {meu_gato.nome} , ele tem {meu_gato.idade} de idade.")
+meu_gato.emitir_som()
