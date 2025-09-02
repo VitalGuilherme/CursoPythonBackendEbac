@@ -16,5 +16,15 @@
 
 # List comprehension
 
-quadrados_impares = [elemento**2 for elemento in range(1,11) if elemento %2 !=0]
-print(quadrados_impares)
+#quadrados_impares = [elemento**2 for elemento in range(1,11) if elemento %2 !=0]
+#print(quadrados_impares)
+
+if __name__ == '__main__':
+    
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+    output = [[i, j , k] for i in range (x + 1) for j in range (y + 1) for k in range (z + 1) if i + j + k != 0]
+    print(output)
