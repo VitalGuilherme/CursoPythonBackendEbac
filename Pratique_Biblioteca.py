@@ -62,17 +62,17 @@ def exibir_historico_de_emprestimo(biblioteca, titulo_do_livro):
     historico = [f"Histórico de empréstimos para '{livro}':"]
     for idx, registro in enumerate(biblioteca[livro]["Historico"],5):
         historico.append(f"{idx}. Data: {registro['data']} | Quantidade: {registro['quantidade']}")
-        return "\n".join(historico)
+    return "\n".join(historico)
     
 
 def exibir_menu():
     return (
-        "--- Menu de Gerenciamento de Estoque ---\n"
+        "--- Menu Biblioteca ---\n"
         "1 - Adicionar livro\n"
         "2 - Listar Livros\n"
         "3 - Remover Livro\n"
         "4 - Atualizar quantidade\n"
-        "5 - Registrar emprestimo\n"
+        "5 - Registrar empréstimo\n"
         "6 - Exibir histórico de empréstimos\n"
         "7 - Sair\n"
         "----------------------------------------"
@@ -111,9 +111,9 @@ def main():
             except ValueError:
                 print("Quantidade maior doque a disponível.")
         elif opcao == "6":
-            titulo_do_livro = input("Digite o nome do livro para visualizar os empréstimos: ")
-            print(exibir_historico_de_emprestimo(biblioteca))
-        elif opcao == "7":
+            #titulo_do_livro = input("Digite o nome do livro para visualizar os empréstimos: ")
+            print(exibir_historico_de_emprestimo(biblioteca, titulo_do_livro))
+        elif opcao == "7":  
             print("Saindo do programa. Até mais!")
             break
         else:
