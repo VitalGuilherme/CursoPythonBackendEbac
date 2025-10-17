@@ -38,4 +38,4 @@ def remover_tarefa(nome: str):
         if tarefa.nome == nome:
             listar_tarefas.remove(tarefa)
             return {"message": "Tarefa deletada com sucesso!"}
-    raise HTTPException(status_code=404, detail="Tarefa não encontrada.")
+    raise HTTPException(status_code=404, detail="Tarefa não encontrada.") 
